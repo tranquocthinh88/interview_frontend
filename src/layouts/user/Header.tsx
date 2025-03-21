@@ -9,9 +9,11 @@ import Service from "../../components/menu/Service";
 import Loan from "../../components/menu/Loan";
 import Card from "../../components/menu/Card";
 import Endow from "../../components/menu/Endow";
+import DialogLogin from "../../components/dialog/DialogLogin";
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
+  const [openLoginDialog, setOpenLoginDialog] = useState(false);
 
   return (
     <Box sx={{
@@ -107,7 +109,7 @@ const Header = () => {
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
               backgroundColor: "white"
             },
-          }}>
+          }} onClick={() => setOpenLoginDialog(true)}>
             Đăng nhập
           </Button>
         </Box>
@@ -147,6 +149,7 @@ const Header = () => {
             <Endow /> </Box>
         </Box>
       </Box>
+      <DialogLogin open={openLoginDialog} onClose={() => setOpenLoginDialog(false)} />
     </Box>
   );
 }

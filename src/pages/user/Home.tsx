@@ -7,7 +7,7 @@ const Home = () => {
         <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
             <Header></Header>
             <Box sx={{ flexGrow: 1, overflowY: "auto", width: "100wh" }}>
-                <Box sx={{width: "100wh", height: "100vh", backgroundColor: "lightblue"}}>
+                <Box sx={{width: "100wh", height: "100vh", backgroundColor: 'green'}}>
 
                 </Box>
                 <Footer></Footer>
